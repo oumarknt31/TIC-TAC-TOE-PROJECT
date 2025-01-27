@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Img/step0.png</file>
+        <file>Img/step2.png</file>
+        <file>Img/step3.png</file>
+        <file>Img/step4.png</file>
+        <file>Img/step5.png</file>
+        <file>Img/step6.png</file>
+        <file>Img/step7.png</file>
+        <file>Img/back.png</file>
+        <file>Img/back2.png</file>
+        <file>Img/checkmate.png</file>
+        <file>Img/checkmate2.png</file>
+        <file>Img/confirm2.png</file>
+        <file>Img/draw.png</file>
+        <file>Img/exit.png</file>
+        <file>Img/exit2.png</file>
+        <file>Img/help.png</file>
+        <file>Img/help2.png</file>
+        <file>Img/landing.png</file>
+        <file>Img/lost.png</file>
+        <file>Img/next.png</file>
+        <file>Img/next2.png</file>
+        <file>Img/previous.png</file>
+        <file>Img/previous2.png</file>
+        <file>Img/restart.png</file>
+        <file>Img/welcome3.png</file>
+        <file>Img/won.png</file>
+        <file>Img/black.png</file>
+        <file>Img/BlackImg.png</file>
+        <file>Img/confirm.png</file>
+        <file>Img/GameOver.png</file>
+        <file>Img/green.png</file>
+        <file>Img/lightpurple.png</file>
+        <file>Img/pink.png</file>
+        <file>Img/pink2.png</file>
+        <file>Img/purple.png</file>
+        <file>Img/welcome2.png</file>
+        <file>Img/white.png</file>
+        <file>Img/yellow1.png</file>
+        <file>Img/yellow2.png</file>
+        <file>Img/step1.png</file>
+    </qresource>
+</RCC>

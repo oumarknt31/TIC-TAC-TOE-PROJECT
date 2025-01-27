@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TicTacToe</class>
+ <widget class="QMainWindow" name="TicTacToe">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>1067</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>710</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainTicTacToe</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+</string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>550</width>
+      <height>710</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="Welcome">
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:Img/welcome3.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+     </property>
+     <widget class="QPushButton" name="displayX">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>420</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink2.png&quot;);
+color: white;
+</string>
+      </property>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="displayO">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>420</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink2.png&quot;);
+color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="text">
+       <string>O</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Confirm">
+      <property name="geometry">
+       <rect>
+        <x>199</x>
+        <y>561</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/confirm2.png&quot;);
+color: rgb(255, 147, 0);
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Xchoice">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>530</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Ochoice">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>530</y>
+        <width>20</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>170</y>
+        <width>361</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Georgia</family>
+        <pointsize>20</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: transparent;
+color: #6463e2</string>
+      </property>
+      <property name="text">
+       <string>Tic Tac Toe is a classic two-player or Player Vs AI game played on a 3x3 grid. Players/AI take turns placing their symbol—X or O—in an empty square. The goal is to be the first to align three of their symbols in a row, column, or diagonal. If all squares are filled without a winner, the game ends in a draw.</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>440</y>
+        <width>91</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: transparent;
+color:#dd4f88</string>
+      </property>
+      <property name="text">
+       <string>CHOOSE YOUR SYMBOL!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Game">
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:Img/landing.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+     </property>
+     <widget class="QPushButton" name="Btn1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>170</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>170</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn3">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>170</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>320</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>.AppleSystemUIFont</family>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn5">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>320</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn6">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>320</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn8">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Btn9">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>100</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/pink.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Help_Btn">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>630</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/help2.png&quot;);
+color: white;
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="yourturn">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chalkduster</family>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#00c49c;
+border-radius: 10px;
+border-image: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cm">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>280</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:transparent;
+color: #00c49c</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="GameOver">
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:Img/draw.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+     </property>
+     <widget class="QPushButton" name="exit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>610</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/exit2.png&quot;);
+color: white;
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="restart">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>610</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/restart.png&quot;);
+color: white;
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Help_pg">
+     <property name="styleSheet">
+      <string notr="true">border-image:url(&quot;:Img/lightpurple.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+     </property>
+     <widget class="QStackedWidget" name="HelpStackedWid">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>491</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/purple.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+
+
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="step1">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step0.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step2">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step1.png&quot;);
+background-position: center;
+background-repeat: no-repeat;
+</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step3">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step2.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step4">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step3.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step5">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step4.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step6">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step5.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step7">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step6.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="step8">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(&quot;:Img/step7.png&quot;);
+background-position: center;
+background-repeat: no-repeat;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="Previous">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/previous2.png&quot;);
+color: yellow;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="next">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>10</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/next2.png&quot;);
+color: yellow;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="BackToGame">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>650</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(&quot;:Img/back2.png&quot;);
+color: yellow;
+border-radius: 10px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
